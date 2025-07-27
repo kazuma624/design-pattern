@@ -1,13 +1,13 @@
 from __future__ import annotations
 from dataclasses import dataclass
-# from book_shelf import BookShelf
+from book_shelf import BookShelf
 from book import Book
 from interface import MyIterator
 
 
 @dataclass
-class BookShelfIterator(MyIterator):
-    _book_shelf: "BookShelf"
+class BookShelfIterator(MyIterator[Book]):
+    _book_shelf: BookShelf
     _index: int = 0
 
     def has_next(self) -> bool:

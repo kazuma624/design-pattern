@@ -1,20 +1,20 @@
 from abc import ABC, abstractmethod
-from typing import TypeVar
+from typing import TypeVar, Generic
 
 
 T = TypeVar("T")
 
-class MyIterator:
+class MyIterator(ABC, Generic[T]):
     @abstractmethod
-    def has_next() -> bool:
+    def has_next(self) -> bool:
         raise NotImplementedError
 
     @abstractmethod
-    def next() -> T:
+    def next(self) -> T:
         raise NotImplementedError
 
 
-class MyIterable:
+class MyIterable(ABC, Generic[T]):
     @abstractmethod
-    def iterator() -> T:
+    def iterator(self) -> MyIterator[T]:
         raise NotImplementedError
