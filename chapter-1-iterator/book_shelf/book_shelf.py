@@ -21,5 +21,5 @@ class BookShelf(MyIterable[Book]):
     def iterator(self) -> MyIterator[Book]:
         # NOTE: ここでimportしないと循環参照になる。Javaの書き方に寄せているから？
         from book_shelf_iterator import BookShelfIterator
-        return BookShelfIterator(self)
 
+        return BookShelfIterator(self)

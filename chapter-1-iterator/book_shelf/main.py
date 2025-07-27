@@ -1,7 +1,8 @@
 from book_shelf import BookShelf
 from book import Book
 
-def main():
+
+def main() -> None:
     book_shelf = BookShelf()
     book_shelf.append_book(Book("Around the World in 80 Days"))
     book_shelf.append_book(Book("Bible"))

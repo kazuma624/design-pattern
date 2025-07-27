@@ -4,6 +4,7 @@ from typing import TypeVar, Generic
 
 T = TypeVar("T")
 
+
 class MyIterator(ABC, Generic[T]):
     @abstractmethod
     def has_next(self) -> bool:
