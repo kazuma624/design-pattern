@@ -1,6 +1,7 @@
-from dataclasses import dataclass, field
 from book import Book
+from dataclasses import dataclass, field
 from interface import MyIterable, MyIterator
+from typing import override
 
 
 @dataclass
@@ -18,6 +19,7 @@ class BookShelf(MyIterable[Book]):
     def get_length(self) -> int:
         return self._last
 
+    @override
     def iterator(self) -> MyIterator[Book]:
         # NOTE: ここでimportしないと循環参照になる。Javaの書き方に寄せているから？
         from book_shelf_iterator import BookShelfIterator
