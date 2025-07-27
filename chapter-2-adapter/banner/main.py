@@ -1,5 +1,6 @@
 from print import Print
 from print_banner import PrintBanner
+from print_banner_deligation import PrintBannerDeligation
 
 
 def main() -> None:
@@ -8,5 +9,12 @@ def main() -> None:
     p.print_strong()
 
 
+def main2() -> None:
+    pd: PrintBannerDeligation = PrintBannerDeligation("hello")
+    pd.print_weak()
+    pd.print_strong()
+
+
 if __name__ == "__main__":
     main()
+    main2()
