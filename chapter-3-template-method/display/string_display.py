@@ -22,7 +22,7 @@ class StringDisplay(AbstractDisplay):
 
     def _print_line(self) -> None:
         print("+", end="")
-        for i in range(self.width):
+        for _ in range(self.width):
             print("-", end="")
 
         print("+")

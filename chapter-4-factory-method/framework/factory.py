@@ -8,6 +8,8 @@ class Factory(ABC):
 
     「実際のインスタンス生成を、インスタンス生成のためのメソッド呼び出しに代えることで、
     具体的なクラス名による束縛からスーパークラスを解放している」
+
+    これがテンプレートメソッド（Template Method パターンの応用）
     """
     def create(self, owner: str) -> Product:
         p: Product = self.create_product(owner)
