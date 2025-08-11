@@ -12,17 +12,23 @@ def main():
     card2.use()
     card3.use()
 
+    factory.get_owner_by_id(101)
+    factory.get_owner_by_id(102)
+    factory.get_owner_by_id(103)
+
 
 if __name__ == "__main__":
     main()
     """
     Hiroshi Yukiのカードを作ります。
-    [IDCard:Hiroshi Yuki]を登録しました。
+    [IDCard:(101) Hiroshi Yuki]を登録しました。
     Tomuraのカードを作ります。
-    [IDCard:Tomura]を登録しました。
+    [IDCard:(102) Tomura]を登録しました。
     Hanako Satoのカードを作ります。
-    [IDCard:Hanako Sato]を登録しました。
-    [IDCard:Hiroshi Yuki]を使います。
-    [IDCard:Tomura]を使います。
-    [IDCard:Hanako Sato]を使います。
+    [IDCard:(103) Hanako Sato]を登録しました。
+    [IDCard:(101) Hiroshi Yuki]を使います。
+    [IDCard:(102) Tomura]を使います。
+    [IDCard:(103) Hanako Sato]を使います。
+    ID:103はIDCard:Hiroshi Yukiです。
+    ID:103はIDCard:Tomuraです。
     """
