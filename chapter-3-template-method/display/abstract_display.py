@@ -15,6 +15,9 @@ class AbstractDisplay(ABC):
         raise NotImplementedError
 
     def display(self) -> None:
+        """これがテンプレートメソッド
+        内部で呼び出しているメソッドは具象クラスで実装しないといけない
+        """
         self.open()
         for i in range(5):
             self.print()

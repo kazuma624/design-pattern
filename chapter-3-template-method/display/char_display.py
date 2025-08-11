@@ -4,7 +4,7 @@ from typing import override
 
 class CharDisplay(AbstractDisplay):
     def __init__(self, ch: str) -> None:
-        # Java版では char と string を区別している
+        # Python は char と string を区別しないので、あくまで書籍の流れを再現
         self.ch = ch
 
     @override
