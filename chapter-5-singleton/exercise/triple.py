@@ -21,6 +21,10 @@ class Triple:
 
     @classmethod
     def get_instance(cls, name: str) -> "Triple":
+        """
+        ファクトリメソッド
+        `return Triple(name)` と等価
+        """
         return cls(name)
 
     def __str__(self) -> str:
